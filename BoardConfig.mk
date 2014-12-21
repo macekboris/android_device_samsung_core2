@@ -68,6 +68,12 @@ USE_OPENGL_RENDERER := true
 # conservatively (or at least with awareness of the trade-off being made).
 VSYNC_EVENT_PHASE_OFFSET_NS := 0
 
+TARGET_BOOTLOADER_BOARD_NAME := sc8830
+
+BOARD_KERNEL_CMDLINE := console=ttyS0,115200n8 mem=832M@0xA2000000 androidboot.console=ttyS0 vc-cma-mem=0/176M@0xCB000000
+BOARD_KERNEL_BASE := 0xa2000000
+BOARD_KERNEL_PAGESIZE := 4096
+
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 576716800
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 209715200
@@ -76,3 +82,34 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 512
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 BOARD_USES_ALSA_AUDIO := true
+
+# Kernel
+TARGET_KERNEL_CONFIG := kanas3gnfc_hw03_defconfig
+
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/core2/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/core2/libbt_vndcfg.txt
+
+# Connectivity - Wi-Fi
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+WPA_SUPPLICANT_VERSION      := VER_0_8_X
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
+BOARD_HOSTAPD_DRIVER        := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_bcmdhd
+BOARD_WLAN_DEVICE           := bcmdhd
+BOARD_WLAN_DEVICE_REV       := bcm4334
+WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/dhd/parameters/firmware_path"
+WIFI_DRIVER_FW_PATH_STA     := "/system/etc/wifi/bcmdhd_sta.bin"
+WIFI_DRIVER_FW_PATH_AP      := "/system/etc/wifi/bcmdhd_apsta.bin"
+WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/dhd.ko"
+WIFI_DRIVER_MODULE_NAME     := "dhd"
+WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/etc/wifi/bcmdhd_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
+WIFI_DRIVER_MODULE_AP_ARG   := "firmware_path=/system/etc/wifi/bcmdhd_apsta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
+WIFI_BAND                   := 802_11_ABG
+
+# Wi-Fi Tethering
+BOARD_HAVE_SAMSUNG_WIFI := true
+
+

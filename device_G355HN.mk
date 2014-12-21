@@ -25,12 +25,11 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
-	device/samsung/core2/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
-	device/samsung/core2/bcm_keypad_v2.kl:system/usr/keylayout/bcm_keypad_v2.kl \
-	device/samsung/core2/cyttsp4_btn.kl:system/usr/keylayout/cyttsp4_btn.kl \
-	device/samsung/core2/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-	device/samsung/core2/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
-	device/samsung/core2/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl
+	device/samsung/core2/keylayout/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
+	device/samsung/core2/keylayout/bcm_keypad_v2.kl:system/usr/keylayout/bcm_keypad_v2.kl \
+	device/samsung/core2/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+	device/samsung/core2/keylayout/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
+	device/samsung/core2/keylayout/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -69,8 +68,8 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
 	frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
 	frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
-	frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
-	frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
+	frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
+	frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
 	frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
 	frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
 	frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
