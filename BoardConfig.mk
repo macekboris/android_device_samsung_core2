@@ -70,7 +70,9 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 0
 
 TARGET_BOOTLOADER_BOARD_NAME := sc8830
 
-BOARD_KERNEL_CMDLINE := console=ttyS0,115200n8 mem=832M@0xA2000000 androidboot.console=ttyS0 vc-cma-mem=0/176M@0xCB000000
+#BOARD_KERNEL_CMDLINE := console=ttyS0,115200n8 mem=832M@0xA2000000 androidboot.console=ttyS0 vc-cma-mem=0/176M@0xCB000000
+#To rebuild this boot image, you can use the command:  mkbootimg --base 0 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100 --cmdline 'console=ttyS1,115200n8' --kernel kernel --ramdisk ramdisk.cpio.gz -o recovery.img
+BOARD_KERNEL_CMDLINE := console=ttyS0,115200n8
 BOARD_KERNEL_BASE := 0xa2000000
 BOARD_KERNEL_PAGESIZE := 4096
 
