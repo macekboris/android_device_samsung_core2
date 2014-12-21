@@ -12,13 +12,13 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/core2/overlay
 
 # Init files
 PRODUCT_COPY_FILES += \
-	device/samsung/core2/init.capri_ss_baffin.rc:root/init.capri_ss_baffin.rc \
-	device/samsung/core2/init.bcm281x5.usb.rc:root/init.bcm281x5.usb.rc \
-	device/samsung/core2/init.log.rc:root/init.log.rc \
-	device/samsung/core2/init.recovery.capri_ss_baffin.rc:root/init.recovery.capri_ss_baffin.rc \
-	device/samsung/core2/lpm.rc:root/lpm.rc \
-	device/samsung/core2/ueventd.capri_ss_baffin.rc:root/ueventd.capri_ss_baffin.rc \
-	device/samsung/core2/fstab.capri_ss_baffin:root/fstab.capri_ss_baffin \
+	device/samsung/rootdir/core2/init.kanas3gnfc.rc:root/init.kanas3gnfc.rc \
+	device/samsung/rootdir/core2/init.kanas3gnfc_base.rc:root/init.kanas3gnfc_base.rc \
+	device/samsung/rootdir/core2/init.sc8830.rc:root/init.sc8830.rc \
+	device/samsung/rootdir/core2/init.sc8830.usb.rc:root/init.sc8830.usb.rc \
+	device/samsung/rootdir/core2/init.sc8830_ss.rc:root/init.sc8830_ss.rc \
+	device/samsung/rootdir/core2/ueventd.capri_ss_baffin.rc:root/ueventd.capri_ss_baffin.rc \
+	device/samsung/rootdir/core2/ueventd.sc8830.rc:root/ueventd.sc8830.rc \
 
 PRODUCT_COPY_FILES += \
 	device/samsung/core2/media_codecs.xml:system/etc/media_codecs.xml \
