@@ -34,4 +34,4 @@ brcm.hwc.no-hdmi-trans=1
 
 ro.ril.hsxpa=1
 ro.ril.gprsclass=10
-ro.com.google.gmsversion=4.1_r4
+ro.com.google.gmsversion=4.4_r5
